@@ -1,0 +1,5 @@
+<%= form_with(model: @twisay, local: true ,url: twiapps_path) do |form| %>
+    <%= form.label :content %>
+    <%= form.text_field  :content %>
+    <%= form.submit %>
+<% end %>
