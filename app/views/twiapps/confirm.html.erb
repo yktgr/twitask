@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <header></header>
+    <body>
+
+<h1>以下の内容で投稿する</h1>
+<%= form_with(model: @twidata, local:true,url: twiapps_path) do |form| %>
+    <div>
+    <%= form.hidden_field :content %>  
+    </div>
+    <p>内容：<%= @twidata.content %></p>
+<%= form.submit "投稿する" %>
+<% end %>
+
+<%= form_with(model: @twidata, url: new_twiapp_path, local: true, method: 'get') do |form| %>
+  <%= form.hidden_field :content %>
+  <%= form.submit "もどる" ,name: 'back' %>
+<% end %>
+</body>
+<footer></footer>
+</html>

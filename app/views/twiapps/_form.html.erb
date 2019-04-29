@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <header></header>
     <body>
-<%= form_with(model: @twidata, local:true, url: twiapps_path ) do |form| %>
+<%= form_with(model: @twidata, local:true, url: new_or_edit ) do |form| %>
 <% if @twidata.errors.any? %>
     <div>
     <% @twidata.errors.full_messages.each do |msg| %>

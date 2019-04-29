@@ -9,7 +9,7 @@ class TwiappsController < ApplicationController
     end
     
     def create
-          @twidata = Twi.new(twi_params)
+        @twidata = Twi.new(twi_params)
         if @twidata.save
           redirect_to twiapps_path, notice: "投稿しました！"
         else
@@ -21,14 +21,17 @@ class TwiappsController < ApplicationController
     end
     
     def update
-        if @twi.update(twi_params_params)
-            redirect_to twiapps_path,notice:"投稿を編集しました"
+        if @twidata.update(twi_params)
+            redirect_to twiapps_path, notice:"投稿を編集しました"
         else
             render 'edit'
         end
     end
             
-            
+    def confirm
+      @twidata = Twi.new(twi_params)
+      render :new if @twidata.invalid?
+    end        
             
 private 
 
