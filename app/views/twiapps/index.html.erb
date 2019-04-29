@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <meta charset="UTF-8">
     <header></header>
@@ -15,7 +15,7 @@
     <tr>
     <td>
     <%= link_to '投稿を編集する',edit_twiapp_path(twi.id)  %>
-    <%= link_to '投稿を削除する',twiapps_path(twi.id) ,method: :delete %>
+    <%= link_to '投稿を削除する',twiapp_path(twi.id) ,method: :delete %>
     <%= twi.created_at.strftime("%Y-%m-%d %H:%M") %>
     </td>
     </tr>

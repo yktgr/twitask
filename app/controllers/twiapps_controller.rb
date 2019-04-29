@@ -27,6 +27,10 @@ class TwiappsController < ApplicationController
             render 'edit'
         end
     end
+    def destroy
+      @twidata.destroy
+      redirect_to twiapps_path,notice:"投稿を削除しました"
+    end
             
     def confirm
       @twidata = Twi.new(twi_params)
