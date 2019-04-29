@@ -25,8 +25,7 @@ class TwiappsController < ApplicationController
             redirect_to twiapps_path,notice:"投稿を編集しました"
         else
             render 'edit'
-    end
-
+        end
     end
             
             
@@ -38,7 +37,7 @@ def twi_params
 end
 
 def set_twi
-  @twi = Twi.find(params[:id])
+  @twidata = Twi.find(params[:id])
 end
 
 
