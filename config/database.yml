@@ -1,0 +1,22 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+ 
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  template: template0
+development:
+  <<: *default
+  database: twiapp_development
+
+ 
+test:
+  <<: *default
+  database: twiapp_test
+
+
+production:
+  <<: *default
+  database: twiapp_production
+  username: twiapp
+  password: <%= ENV['TWIAPP_DATABASE_PASSWORD'] %>

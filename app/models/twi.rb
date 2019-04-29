@@ -1,0 +1,2 @@
+class Twi < ApplicationRecord
+end
