@@ -1,22 +1,31 @@
 class TwiappsController < ApplicationController
-    
+    before_action :set_twi, only: [:edit,:update,:destroy]
     def index
-        @twisays = Twi.all
+        @twisdata = Twi.all
     end
     
     def new
-        @twisay = Twi.new
+        @twidata = Twi.new
     end
     
     def create
-        @twisay = Twi.new(twi_params)
-        @twisay.save
+          @twidata = Twi.new(twi_params)
+        if @twidata.save
+          redirect_to twiapps_path, notice: "投稿しました！"
+        else
+          render 'new'
+        end
     end
     
     def edit
     end
     
     def update
+        if @twi.update(twi_params_params)
+            redirect_to twiapps_path,notice:"投稿を編集しました"
+        else
+            render 'edit'
+    end
 
     end
             

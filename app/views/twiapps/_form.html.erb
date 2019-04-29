@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <header></header>
+    <body>
+<%= form_with(model: @twidata, local:true, url: twiapps_path ) do |form| %>
+<% if @twidata.errors.any? %>
+    <div>
+    <% @twidata.errors.full_messages.each do |msg| %>
+    <%= msg %>
+    <% end %>
+    </div>
+    <% end %>
+    <%= form.label :content %>
+    <%= form.text_field :content %>  
+    <%= form.submit '投稿する' %>
+<% end %>
+
+</body>
+<footer></footer>
+</html>
