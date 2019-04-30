@@ -1,0 +1,64 @@
+/* line 2, /home/ubuntu/workspace/twiapp/app/assets/stylesheets/twiapps.scss */
+h1 {
+  font-size: 20px;
+}
+
+/* line 6, /home/ubuntu/workspace/twiapp/app/assets/stylesheets/twiapps.scss */
+header {
+  background-color: #99FFFF;
+  width: 980px;
+  height: 50px;
+}
+
+/* line 12, /home/ubuntu/workspace/twiapp/app/assets/stylesheets/twiapps.scss */
+body {
+  background-color: #99FFFF;
+  width: 980px;
+  text-align: center;
+}
+
+/* line 18, /home/ubuntu/workspace/twiapp/app/assets/stylesheets/twiapps.scss */
+input[type="text"] {
+  font-size: 20px;
+  width: 500px;
+  height: 200px;
+}
+
+/* line 25, /home/ubuntu/workspace/twiapp/app/assets/stylesheets/twiapps.scss */
+#content {
+  height: 150px;
+  font-size: 20px;
+  border-top: solid 1px;
+  text-align: left;
+  vertical-align: top;
+}
+
+/* line 34, /home/ubuntu/workspace/twiapp/app/assets/stylesheets/twiapps.scss */
+table {
+  background-color: #FFFFFF;
+  font-size: 10px;
+  width: 50%;
+  text-align: right;
+}
+
+/* line 43, /home/ubuntu/workspace/twiapp/app/assets/stylesheets/twiapps.scss */
+footer {
+  background-color: #99FFFF;
+  width: 100%;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
