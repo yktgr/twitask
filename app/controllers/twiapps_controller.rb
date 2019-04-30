@@ -1,5 +1,6 @@
 class TwiappsController < ApplicationController
     before_action :set_twi, only: [:edit,:update,:destroy]
+    
     def top
     end
     
