@@ -1,11 +1,18 @@
 class TwiappsController < ApplicationController
     before_action :set_twi, only: [:edit,:update,:destroy]
+    def top
+    end
+    
     def index
         @twisdata = Twi.all
     end
     
     def new
+      if params[:back]
+        @twidata = Twi.new(twi_params)
+      else
         @twidata = Twi.new
+      end
     end
     
     def create
