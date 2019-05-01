@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-    <meta charset="UTF-8">
-    <header></header>
-    <body>
+<meta charset="UTF-8">
+<body>
+<div id = "form-size">
 <%= form_with(model: @twidata, local:true, url: new_or_edit ) do |form| %>
 <% if @twidata.errors.any? %>
     <div>
@@ -11,12 +11,10 @@
     <% end %>
     </div>
     <% end %>
-    
     <%= form.label :content %>
     <p id="form"><%= form.text_field :content %></p>
     <%= form.submit '投稿する' %>
 <% end %>
-
+</div>
 </body>
-<footer></footer>
 </html>
