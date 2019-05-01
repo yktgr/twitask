@@ -19,7 +19,7 @@ class TwiappsController < ApplicationController
     def create
         @twidata = Twi.new(twi_params)
         if @twidata.save
-          redirect_to twiapps_path, notice: "投稿しました！"
+          redirect_to twiapps_index_path, notice: "投稿しました！"
         else
           render 'new'
         end
@@ -30,14 +30,14 @@ class TwiappsController < ApplicationController
     
     def update
         if @twidata.update(twi_params)
-            redirect_to twiapps_path, notice:"投稿を編集しました"
+            redirect_to twiapps_index_path, notice:"投稿を編集しました"
         else
             render 'edit'
         end
     end
     def destroy
       @twidata.destroy
-      redirect_to twiapps_path,notice:"投稿を削除しました"
+      redirect_to twiapps_index_path,notice:"投稿を削除しました"
     end
             
     def confirm
