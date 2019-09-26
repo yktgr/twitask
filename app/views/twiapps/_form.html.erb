@@ -2,19 +2,19 @@
 <html>
 <meta charset="UTF-8">
 <body>
-<div id = "form-size">
-<%= form_with(model: @twidata, local:true, url: new_or_edit ) do |form| %>
+<div>
+<%= form_with(model: @twidata, local:true, url: new_or_edit) do |form| %>
 <% if @twidata.errors.any? %>
     <div>
     <% @twidata.errors.full_messages.each do |msg| %>
     <%= msg %>
     <% end %>
     </div>
-    <% end %>
-    <%= form.label :content %>
-    <p id="form"><%= form.text_field :content %></p>
-    <%= form.submit '投稿する' %>
 <% end %>
+    <%= form.label :content %>
+    <%= form.text_field :content %>
+    <%= form.submit '投稿する' %>
 </div>
+<% end %>
 </body>
 </html>

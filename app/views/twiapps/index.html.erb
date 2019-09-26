@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html>
-    <meta charset="UTF-8">
-<header>twiapp</header>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<header>twiapp
+<span><%= link_to 'top' , root_path %></span>
+<span><%= link_to '新しく投稿する' , new_twiapp_path %></span>
+</header>
+<div class="container">
 <body>
-<h1>投稿一覧</h1>
-<p><%= link_to '新しく投稿する' , new_twiapp_path %></p>
+<p>投稿一覧</p>
 <%= notice %>
-<div align="center">
+<div>
 <table>
     <% @twisdata.each do |twi| %>
-    <tr>
-    <td id="content"><%= twi.content %></td>
+    <tr class="row">
+    <td class="col-md-3"><%= twi.content %></td>
     </tr>
     <tr>
     <td>
@@ -22,8 +25,7 @@
     <% end %>
 </table>
 </div>
-<br>
-
 </body>
+</div>
 <footer></footer>
-</html> 
+</html>
